@@ -1,0 +1,713 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff,
+    0 0 1px #fff;
+  overflow: hidden;
+  background: #000;
+}
+
+.bg {
+  background: url(.//1.png) no-repeat
+    center center;
+  background-size: cover;
+  width: 120vw;
+  height: 120vh;
+  background-color: #000;
+  position: absolute;
+  animation: shake 0.75s linear 0s 6, darkBg 6s linear 0s 1,
+    zoomBg 6s linear 0s 1;
+  top: -5vh;
+  left: -5vw;
+  opacity: 0.5;
+}
+
+.left,
+.right {
+  font-size: 1.75vw;
+  color: #fff;
+  width: 20vw;
+  height: 100vh;
+  position: absolute;
+  padding: 12vh 1vw;
+  box-sizing: border-box;
+  line-height: 2.05vw;
+}
+
+.right {
+  right: 0;
+  width: 30vw;
+}
+
+.bottom {
+  position: absolute;
+  width: 10vw;
+  height: 15vh;
+  top: 68vh;
+  left: 23vw;
+  color: #fff;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 3vw;
+  text-align: center;
+  text-transform: uppercase;
+  text-indent: 0vw;
+  padding: 1vw 1vw 1vw 6vw;
+  box-sizing: border-box;
+  animation: blinker 0.5s linear 8s infinite;
+}
+
+.bottom span {
+  font-size: 4vw;
+  top: -4.5vw;
+  left: -4vw;
+  position: relative;
+  animation: blinker 0.5s linear infinite;
+}
+
+.bottom:before {
+  text-transform: uppercase;
+  content: "";
+  display: inline-block;
+  animation: identPositive 2s linear 5s, blinker 0.5s linear 7s infinite,
+    fixedMsg 0.1s linear 7s infinite;
+}
+
+@keyframes identPositive {
+  0% {
+    content: "";
+  }
+  6% {
+    content: "и";
+  }
+  12% {
+    content: "ин";
+  }
+  14% {
+    content: "инд";
+  }
+  20% {
+    content: "инди";
+  }
+  26% {
+    content: "индиф";
+  }
+  32% {
+    content: "индифи ";
+  }
+  38% {
+    content: "индифик";
+  }
+  44% {
+    content: "индифика";
+  }
+  50% {
+    content: "индификац";
+  }
+  56% {
+    content: "индификаци";
+  }
+  60% {
+    content: "индификация";
+  }
+  64% {
+    content: "индификация ";
+  }
+  68% {
+    content: "индификация з";
+  }
+  72% {
+    content: "индификация за";
+  }
+  76% {
+    content: "индификация зав";
+  }
+  80% {
+    content: "индификация заве";
+  }
+  84% {
+    content: "индификация завер";
+  }
+  88% {
+    content: "индификация заверш";
+  }
+  92% {
+    content: "индификация заверши";
+  }
+  96% {
+    content: "индификация завершин";
+  }
+  100% {
+    content: "индификация завершина";
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fixedMsg {
+  0% {
+    content: "индификация завершина";
+  }
+  100% {
+    content: "индификация завершина";
+  }
+}
+
+.photo {
+  position: absolute;
+  width: 39vw;
+  height: 20vh;
+  top: 20vh;
+  left: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  background: url(.//face.png)
+    no-repeat center center;
+  background-size: cover;
+  width: 75vmin;
+  height: 55vmin;
+  animation: zoom 2.5s linear 1;
+  margin-top: 10vh;
+}
+
+@keyframes zoom {
+  0% {
+    width: 0;
+    height: 0;
+    margin-top: 0vh;
+  }
+  70% {
+    width: 0;
+    height: 0;
+    margin-top: 0vh;
+  }
+  75% {
+    width: 12vmin;
+    height: 10.5vmin;
+    margin-top: 0vh;
+  }
+  85% {
+    width: 12vmin;
+    height: 10.5vmin;
+    margin-top: 0vh;
+  }
+  100% {
+    width: 75vmin;
+    height: 55vmin;
+    margin-top: 10vh;
+  }
+}
+
+.image:after {
+  content: "ЦЕЛЬ ОБНАРУЖЕНА";
+  color: #fff;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 4vw;
+  width: 10vw;
+  float: left;
+  margin: -73vh 0 0 8vw;
+  line-height: 24vw;
+  text-align: right;
+  animation: targetAcquired 8s linear 0s 1;
+  text-transform: uppercase;
+  text-indent: 7vw;
+}
+
+@keyframes targetAcquired {
+  0% {
+    content: "";
+  }
+  87% {
+    content: "";
+  }
+  88% {
+    content: "ц";
+  }
+  89% {
+    content: "це";
+  }
+  90% {
+    content: "цел";
+  }
+  91% {
+    content: "цель";
+  }
+  91% {
+    content: "цель о";
+  }
+  92% {
+    content: "цель об";
+  }
+  93% {
+    content: "цель обн";
+  }
+  94% {
+    content: "цель обна";
+  }
+  95% {
+    content: "цель обнар";
+  }
+  96% {
+    content: "цель обнару";
+  }
+  97% {
+    content: "цель обнаруж";
+  }
+  98% {
+    content: "цель обнаруже";
+  }
+  99% {
+    content: "цель обнаружен";
+  }
+  100% {
+    content: "цель обнаружена";
+  }
+
+
+}
+
+.face-px {
+  background: url(.//face.png)
+    no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: hideImg 5s 1;
+}
+
+@keyframes hideImg {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.search-criteria {
+  animation: hide 2s 1;
+  position: absolute;
+  bottom: 20vh;
+  width: 30vw;
+  opacity: 0;
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.compass {
+  width: 0;
+  opacity: 0;
+  height: 25vh;
+  margin-top: -5vh;
+  float: left;
+  margin-left: 12vw;
+  animation: hideCompass 2s linear 1;
+  position: relative;
+}
+
+@keyframes hideCompass {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  91% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.compass span {
+  height: 100%;
+  width: 0.2vw;
+  display: inline-block;
+  background: #fff;
+  position: absolute;
+  top: 0vh;
+}
+
+.compass span:nth-child(2) {
+  transform: rotate(90deg);
+  height: 90%;
+  top: 1.25vh;
+  position: relative;
+}
+
+.compass span:nth-child(3) {
+  transform: rotate(45deg);
+}
+
+.compass span:nth-child(4) {
+  transform: rotate(-45deg);
+}
+
+.compass span:before,
+.compass span:after {
+  content: "";
+  position: absolute;
+}
+
+.compass span:nth-child(1):before {
+  content: "С";
+  top: -3vh;
+  left: -0.5vw;
+}
+
+.compass span:nth-child(1):after {
+  content: "Ю";
+  bottom: -3vh;
+  left: -0.5vw;
+}
+
+.compass span:nth-child(2):before {
+  content: "З";
+  top: -3vh;
+  left: -0.5vw;
+  transform: rotate(-90deg);
+}
+
+.compass span:nth-child(2):after {
+  content: "В";
+  bottom: -3.5vh;
+  left: -0.5vw;
+  transform: rotate(-90deg);
+}
+
+.compass span:nth-child(3):before {
+  content: "СЗ";
+  top: -3.5vh;
+  left: -1vw;
+  transform: rotate(-45deg);
+}
+
+.compass span:nth-child(3):after {
+  content: "ЮВ";
+  bottom: -3vh;
+  left: -1.2vw;
+  transform: rotate(-45deg);
+}
+
+.compass span:nth-child(4):before {
+  content: "СВ";
+  top: -3vh;
+  left: -1.2vw;
+  transform: rotate(45deg);
+}
+
+.compass span:nth-child(4):after {
+  content: "ЮЗ";
+  bottom: -4vh;
+  left: -1vw;
+  transform: rotate(45deg);
+}
+
+.zoom-parameters {
+  float: left;
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  animation: showZoom 3s linear 1;
+}
+
+@keyframes showZoom {
+  0% {
+    height: 0;
+  }
+  70% {
+    height: 0;
+  }
+  100% {
+    height: 80vh;
+  }
+}
+
+.image-enhance {
+  float: left;
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  animation: showEnhance 2s linear 3s 1;
+}
+
+@keyframes showEnhance {
+  0% {
+    height: 0;
+  }
+  70% {
+    height: 85vh;
+  }
+  100% {
+    height: 85vh;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  90% {
+    transform: translate3d(-1px, 1px, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(1px, 0, 1px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-1px, -1px, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(1px, 0, -1px);
+  }
+}
+
+.tracking {
+  animation: hideTracking 1s linear 0s 1;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+  width: 21vw;
+}
+
+@keyframes hideTracking {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 60vh;
+  }
+}
+
+.scan-level {
+  animation: scanLevel 2s linear 0s 1;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+  width: 21vw;
+}
+
+@keyframes scanLevel {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0vh;
+  }
+  100% {
+    height: 60vh;
+  }
+}
+
+.image-level {
+  animation: imageLevel 1s linear 2s 3;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+@keyframes imageLevel {
+  0% {
+    width: 12vw;
+    height: 9vh;
+  }
+  100% {
+    width: 12vw;
+    height: 50vh;
+  }
+}
+
+.code-level {
+  animation: codeLevel 1s linear 5s infinite;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+@keyframes codeLevel {
+  0% {
+    width: 12vw;
+    height: 7vh;
+  }
+  100% {
+    width: 12vw;
+    height: 50vh;
+  }
+}
+
+.speed {
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 40vh;
+  animation: speedLevel 2s linear 0s 1;
+  width: 30vw;
+  margin-left: -15vw;
+}
+
+@keyframes speedLevel {
+  0% {
+    height: 0;
+  }
+  40% {
+    height: 0vh;
+  }
+  80% {
+    height: 45vh;
+  }
+  100% {
+    height: 45vh;
+  }
+}
+
+.match-criteria {
+  position: absolute;
+  top: 12vh;
+  height: 100vh;
+  overflow: hidden;
+  animation: matchCriteria 8s linear 0s 1;
+}
+
+@keyframes matchCriteria {
+  0% {
+    height: 0;
+  }
+  65% {
+    height: 0vh;
+  }
+  85% {
+    height: 100vh;
+  }
+  100% {
+    height: 100vh;
+  }
+}
+
+@keyframes darkBg {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes zoomBg {
+  0% {
+    width: 110vw;
+    height: 110vh;
+  }
+  75% {
+    width: 120vw;
+    height: 120vh;
+  }
+  80% {
+    width: 120vw;
+    height: 120vh;
+  }
+  100% {
+    width: 120vw;
+    height: 120vh;
+  }
+}
+
+a {
+  position: absolute;
+  top: 1vw;
+  width: 3.5vw;
+  height: 3.5vw;
+  border-radius: 0.15vw;
+  background: #ffffff;
+  border: 0;
+  left: 1vw;
+  cursor: pointer;
+  animation: showBtn 10s linear 0s 1, blinker 0.5s linear 8s infinite;
+  color: transparent;
+  font-size: 3.5vw;
+  font-family: "Orbitron", sans-serif;
+  text-indent: 4vw;
+  line-height: 3.5vw;
+  outline: none;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+@keyframes showBtn {
+  0% {
+    left: -25vw;
+  }
+  75% {
+    left: -25vw;
+  }
+  80% {
+    left: 1vw;
+  }
+  100% {
+    left: 1vw;
+  }
+}
+
+a:before,
+a:after {
+  color: #000000;
+  font-size: 3.5vw;
+  content: "\21B5";
+  position: absolute;
+  bottom: -0.25vw;
+  left: 1.15vw;
+  text-indent: 0;
+}
+
+a:after {
+  content: "\21B5";
+  transform: rotate(180deg);
+  bottom: 0.4vw;
+  left: 0.4vw;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+.sep {
+  margin-top: 2vh;
+}
+
